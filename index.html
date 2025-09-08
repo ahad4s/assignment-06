@@ -4,8 +4,34 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Green Earth - Plant a Tree</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+        theme: {
+            extend: {
+            colors: {
+                primary: "#15803D",
+                darkgreen: "#14532D",
+                brandyellow: "#FACC15"
+            }
+            }
+        }
+        }
+    </script>
 </head>
-<body>
+<body class="class=bg-emerald-50 text-primary">
+    <!-- header -->
+     <header class="sticky top-0 bg-primary text-white shadow z-50">
+        <div class="max-w-7xl mx-auto flex justify-between items-center h-16 px-4">
+            <h1 class="text-2xl font-bold">Green Earth</h1>
+            <nav class="hidden md:flex gap-6 font-small">
+                <a href="#" class="hover:underline">About</a>
+                <a href="#" class="hover:underline">Gallery</a>
+                <a href="#" class="hover:underline">Plant a Tree</a>
+            </nav>
+            <button class="bg-brandyellow text-primary px-4 py-2 rounded-full font-semibold">Plant a Tree</button>
+        </div>
+     </header>
     <script src="script.js"></script>
 </body>
 </html>
