@@ -19,7 +19,7 @@
         }
     </script>
 </head>
-<body class="class=bg-emerald-50 text-primary">
+<body class="bg-emerald-50 text-primary">
     <!-- header -->
     <header class="sticky top-0 bg-primary text-white shadow z-50">
         <div class="max-w-7xl mx-auto flex justify-between items-center h-16 px-4">
@@ -50,6 +50,41 @@
             <button class="mt-8 bg-brandyellow text-primary px-8 py-3 rounded-full font-semibold shadow-lg hover:bg-yellow-400 transition-colors">Get Involved</button>
         </div>
         <img src="assets/hero-leaf2.png" alt="Tree Right" class="absolute bottom-0 right-0 w-48 md:w-80 lg:w-96 opacity-90 pointer-events-none z-0">
+    </section>
+    <!-- Categories and Trees -->
+    <section id="categories" class="max-w-7xl mx-auto px-4 py-16 grid md:grid-cols-4 gap-8">
+        <div class="md:col-span-4 text-center mb-8">
+            <h3 class="text-3xl font-bold text-black">Choose Your Trees</h3>
+        </div>
+        <aside>
+            <h3 class="font-bold text-lg mb-4">Categories</h3>
+            <div id="category-list" class="flex flex-col gap-2"></div>
+        </aside>
+        <!-- Trees and Cart -->
+        <div class="md:col-span-3 grid md:grid-cols-4 gap-6">
+            <!-- Trees -->
+            <div class="md:col-span-3">
+                <div id="loading" class="hidden text-center py-6">
+                    <div class="flex justify-center space-x-2">
+                        <span class="w-3 h-3 bg-primary rounded-full animate-bounce"></span>
+                        <span class="w-3 h-3 bg-primary rounded-full animate-bounce [animation-delay:-0.2s]"></span>
+                        <span class="w-3 h-3 bg-primary rounded-full animate-bounce [animation-delay:-0.4s]"></span>
+                    </div>
+                </div>
+                <div id="trees-list" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6"></div>
+            </div>
+            <!-- Cart -->
+            <aside class="bg-white rounded-lg shadow-md p-5 border border-emerald-100">
+                <h3 class="font-bold text-lg mb-4 text-primary">Your Cart</h3>
+                <ul id="cart-list" class="space-y-3 text-sm">
+                    <li class="text-gray-500 text-center">No items in cart</li>
+                </ul>
+                <div class="border-t mt-4 pt-3 flex justify-between items-center font-semibold text-primary">
+                    <span>Total:</span>
+                    <span id="cart-total">৳0</span>
+                </div>
+            </aside>
+        </div>
     </section>
     <!-- About the Campaign -->
     <section class="bg-emerald-50 py-16">
@@ -109,6 +144,13 @@
     <footer class="bg-darkgreen text-white text-center text-sm py-4">
         <p>© 2025 Green Earth. All Rights Reserved.</p>
     </footer>
+    <!-- Popup Modal -->
+    <div id="modal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+        <div class="bg-white rounded-lg p-6 max-w-md w-full relative">
+            <button id="modal-close" class="absolute top-2 right-2 text-gray-600">✖</button>
+            <div id="modal-content"></div>
+        </div>
+    </div>
     <script src="script.js"></script>
 </body>
 </html>
