@@ -24,12 +24,21 @@
     <header class="sticky top-0 bg-primary text-white shadow z-50">
         <div class="max-w-7xl mx-auto flex justify-between items-center h-16 px-4">
             <h1 class="text-2xl font-bold">Green Earth</h1>
-            <nav class="hidden md:flex gap-6 font-small">
+            <nav id="menu" class="hidden md:flex gap-6 font-small">
                 <a href="#" class="hover:underline">About</a>
                 <a href="#" class="hover:underline">Gallery</a>
                 <a href="#" class="hover:underline">Plant a Tree</a>
             </nav>
-            <button class="bg-brandyellow text-primary px-4 py-2 rounded-full font-semibold">Plant a Tree</button>
+            <button class="hidden md:inline bg-brandyellow text-primary px-4 py-2 rounded-full font-semibold">Plant a Tree</button>
+            <!-- Mobile Hamburger -->
+            <button id="menu-btn" class="md:hidden text-2xl focus:outline-none">☰</button>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden flex flex-col gap-3 bg-primary text-white px-4 pb-4">
+            <a href="#" class="hover:underline">About</a>
+            <a href="#" class="hover:underline">Gallery</a>
+            <a href="#" class="hover:underline">Plant a Tree</a>
+            <button class="bg-brandyellow text-primary px-4 py-2 rounded-full font-medium inline-block self-start">Plant a Tree</button>
         </div>
     </header>
     <!-- Banner -->
@@ -38,7 +47,7 @@
         <div class="relative z-10 max-w-7xl mx-auto px-4 text-center">
             <h2 class="text-4xl md:text-5xl font-extrabold text-gray-800">Plant a Tree, Grow a Future</h2>
             <p class="mt-4 max-w-xl mx-auto text-emerald-800">Join our mission to plant 1 million trees and make the Earth greener for future generations.</p>
-            <button class="mt-8 bg-brandyellow text-primary px-8 py-3 rounded-lg font-semibold shadow-lg hover:bg-yellow-400 transition-colors">Get Involved</button>
+            <button class="mt-8 bg-brandyellow text-primary px-8 py-3 rounded-full font-semibold shadow-lg hover:bg-yellow-400 transition-colors">Get Involved</button>
         </div>
         <img src="assets/hero-leaf2.png" alt="Tree Right" class="absolute bottom-0 right-0 w-48 md:w-80 lg:w-96 opacity-90 pointer-events-none z-0">
     </section>
@@ -86,7 +95,8 @@
             <form class="grid grid-cols-1 gap-4">
                 <input class="p-3 rounded-md text-primary w-full" placeholder="Your Name" />
                 <input class="p-3 rounded-md text-primary w-full" placeholder="Your Email Address" />
-                <select class="p-3 rounded-md text-primary w-full">
+                <select class="p-3 rounded-md text-black w-full">
+                    <option>Number of Trees</option>
                     <option>1 Tree - $5</option>
                     <option>5 Trees - $25</option>
                     <option>10 Trees - $50</option>
