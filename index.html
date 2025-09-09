@@ -7,15 +7,15 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
-        theme: {
-            extend: {
-            colors: {
-                primary: "#15803D",
-                darkgreen: "#14532D",
-                brandyellow: "#FACC15"
+            theme: {
+                extend: {
+                    colors: {
+                        primary: "#15803D",
+                        darkgreen: "#14532D",
+                        brandyellow: "#FACC15"
+                    }
+                }
             }
-            }
-        }
         }
     </script>
 </head>
@@ -23,7 +23,7 @@
     <!-- header -->
     <header class="sticky top-0 bg-primary text-white shadow z-50">
         <div class="max-w-7xl mx-auto flex justify-between items-center h-16 px-4">
-            <h1 class="text-2xl font-bold">Green Earth</h1>
+            <h1 class="text-2xl font-bold">🌱Green Earth</h1>
             <nav id="menu" class="hidden md:flex gap-6 font-small">
                 <a href="#" class="hover:underline">About</a>
                 <a href="#" class="hover:underline">Gallery</a>
@@ -43,21 +43,21 @@
     </header>
     <!-- Banner -->
     <section class="relative bg-emerald-100 py-20 md:py-28 overflow-hidden">
-        <img src="assets/hero-leaf1.png" alt="Tree Left" class="absolute bottom-0 left-0 w-48 md:w-80 lg:w-96 opacity-90 pointer-events-none z-0">
+        <img src="assets/hero-leaf1.png" alt="Tree Left" class="hidden md:block absolute bottom-0 left-0 w-48 md:w-80 lg:w-96 opacity-90 pointer-events-none z-0">
         <div class="relative z-10 max-w-7xl mx-auto px-4 text-center">
             <h2 class="text-4xl md:text-5xl font-extrabold text-gray-800">Plant a Tree, Grow a Future</h2>
             <p class="mt-4 max-w-xl mx-auto text-emerald-800">Join our mission to plant 1 million trees and make the Earth greener for future generations.</p>
             <button class="mt-8 bg-brandyellow text-primary px-8 py-3 rounded-full font-semibold shadow-lg hover:bg-yellow-400 transition-colors">Get Involved</button>
         </div>
-        <img src="assets/hero-leaf2.png" alt="Tree Right" class="absolute bottom-0 right-0 w-48 md:w-80 lg:w-96 opacity-90 pointer-events-none z-0">
+        <img src="assets/hero-leaf2.png" alt="Tree Right" class="hidden md:block absolute bottom-0 right-0 w-48 md:w-80 lg:w-96 opacity-90 pointer-events-none z-0">
     </section>
     <!-- Categories and Trees -->
     <section id="categories" class="max-w-7xl mx-auto px-4 py-16 grid md:grid-cols-4 gap-8">
         <div class="md:col-span-4 text-center mb-8">
-            <h3 class="text-3xl font-bold text-black">Choose Your Trees</h3>
+            <h3 class="text-3xl font-bold text-gray-800">Choose Your Trees</h3>
         </div>
         <aside>
-            <h3 class="font-bold text-lg mb-4">Categories</h3>
+            <h3 class="font-bold text-lg text-gray-800 mb-4">Categories</h3>
             <div id="category-list" class="flex flex-col gap-2"></div>
         </aside>
         <!-- Trees and Cart -->
@@ -75,7 +75,7 @@
             </div>
             <!-- Cart -->
             <aside class="bg-white rounded-lg shadow-md p-5 border border-emerald-100">
-                <h3 class="font-bold text-lg mb-4 text-primary">Your Cart</h3>
+                <h3 class="font-bold text-lg mb-4 text-gray-800">Your Cart</h3>
                 <ul id="cart-list" class="space-y-3 text-sm">
                     <li class="text-gray-500 text-center">No items in cart</li>
                 </ul>
@@ -88,7 +88,7 @@
     </section>
     <!-- About the Campaign -->
     <section class="bg-emerald-50 py-16">
-        <h2 class="text-center text-2xl md:text-3xl font-bold mb-10 text-primary">About the Campaign</h2>
+        <h2 class="text-center text-2xl md:text-3xl font-bold mb-10 text-gray-800">About the Campaign</h2>
         <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8 items-center px-6">
             <div class="flex justify-center">
                 <img src="assets/about.png" alt="plant" class="w-full max-w-md rounded-lg shadow" />
@@ -147,8 +147,10 @@
     <!-- Popup Modal -->
     <div id="modal" class="hidden fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
         <div class="bg-white rounded-lg p-6 max-w-md w-full relative">
-            <button id="modal-close" class="absolute top-2 right-2 text-gray-600">✖</button>
             <div id="modal-content"></div>
+            <div class="flex justify-end mt-4">
+                <button id="modal-close" class="bg-primary text-white px-5 py-2 rounded-lg hover:bg-darkgreen transition">Close</button>
+            </div>
         </div>
     </div>
     <script src="script.js"></script>
